@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         Tab tab = actionBar.newTab().setText("Favoritos").setTabListener(new TabManagerListener<FavoriteTabContentFragment>(this, "favoritos", FavoriteTabContentFragment.class));
         actionBar.addTab(tab);
         
-        tab = actionBar.newTab().setText("Favoritos").setTabListener(new TabManagerListener<AllTabContentFragment>(this, "todos", AllTabContentFragment.class));
+        tab = actionBar.newTab().setText("Todos").setTabListener(new TabManagerListener<AllTabContentFragment>(this, "todos", AllTabContentFragment.class));
         actionBar.addTab(tab);
         
     }
