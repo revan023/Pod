@@ -1,26 +1,26 @@
 package com.app.pod;
 
-import android.os.Bundle;
+import android.app.ActionBar.Tab;
 import android.app.Activity;
-import android.app.TabActivity;
-import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TabHost;
-import android.widget.TabHost.TabSpec;
 
-public class MainActivity extends TabActivity {
+public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        
+        /*
         TabHost tabHost = getTabHost();
         
         // tab para favoritos
         TabSpec favoritosSpec = tabHost.newTabSpec("Favoritos");
         favoritosSpec.setIndicator("Favoritos");
-        Intent favoritosIntent = new Intent(this, FavActivity.class);
+        Intent favoritosIntent = new Intent(this, FavoriteTabContentFragment.class);
         favoritosSpec.setContent(favoritosIntent);
         
         // tab para favoritos
@@ -31,6 +31,8 @@ public class MainActivity extends TabActivity {
         
         tabHost.addTab(mainSpec);
         tabHost.addTab(favoritosSpec);
+        */
+        
     }
 
     @Override
