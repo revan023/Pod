@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">ThePodcaster</string>
+    <string name="hello_world">Olá João!</string>
+    <string name="menu_settings">Configurações</string>
+    <string name="title_activity_main">The Podcaster</string>
+    <string name="title_activity_fav">FavActivity</string>
+    <string name="title_activity_all">AllActivity</string>
+
+</resources>
