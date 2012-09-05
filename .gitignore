@@ -161,3 +161,10 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+#Android
+gen
+ic_launcher-web.png
+libs
+proguard-project.txt
+project.properties
