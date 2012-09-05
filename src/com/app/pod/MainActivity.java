@@ -1,10 +1,11 @@
 package com.app.pod;
 
+import android.app.ActionBar;
 import android.app.ActionBar.Tab;
+import android.app.ActionBar.TabListener;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.TabHost;
 
 public class MainActivity extends Activity {
 
@@ -13,25 +14,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        actionBar.setDisplayShowTitleEnabled(false);
         
-        /*
-        TabHost tabHost = getTabHost();
+        Tab tab = actionBar.newTab().setText("Favoritos").setTabListener(new TabManagerListener<FavoriteTabContentFragment>(this, "favoritos", FavoriteTabContentFragment.class));
+        actionBar.addTab(tab);
         
-        // tab para favoritos
-        TabSpec favoritosSpec = tabHost.newTabSpec("Favoritos");
-        favoritosSpec.setIndicator("Favoritos");
-        Intent favoritosIntent = new Intent(this, FavoriteTabContentFragment.class);
-        favoritosSpec.setContent(favoritosIntent);
-        
-        // tab para favoritos
-        TabSpec mainSpec = tabHost.newTabSpec("Todos");
-        mainSpec.setIndicator("Todos");
-        Intent mainIntent = new Intent(this, AllActivity.class);
-        mainSpec.setContent(mainIntent);
-        
-        tabHost.addTab(mainSpec);
-        tabHost.addTab(favoritosSpec);
-        */
+        tab = actionBar.newTab().setText("Favoritos").setTabListener(new TabManagerListener<AllTabContentFragment>(this, "todos", AllTabContentFragment.class));
+        actionBar.addTab(tab);
         
     }
 
