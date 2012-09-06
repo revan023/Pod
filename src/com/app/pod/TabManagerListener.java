@@ -6,7 +6,8 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 
 public class TabManagerListener<T extends Fragment> implements TabListener {
-    private Fragment mFragment;
+    
+	private Fragment mFragment;
     private final Activity mActivity;
     private final String mTag;
     private final Class<T> mClass;
@@ -25,7 +26,7 @@ public class TabManagerListener<T extends Fragment> implements TabListener {
     /* The following are each of the ActionBar.TabListener callbacks */
 
     public void onTabSelected(Tab tab, FragmentTransaction ft) {
-        // Check if the fragment is already initialized
+    	// Check if the fragment is already initialized
         if (mFragment == null) {
             // If not, instantiate and add it to the activity
             mFragment = Fragment.instantiate(mActivity, mClass.getName());

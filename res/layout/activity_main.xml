@@ -11,7 +11,7 @@
 		    android:name="com.app.pod.FavoriteTabContentFragment"
 		    android:id="@+id/favorite_tab"
 		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content" 
+		    android:layout_height="match_parent" 
 		/>
 	</LinearLayout>
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -23,7 +23,7 @@
 		    android:name="com.app.pod.AllTabContentFragment"
 		    android:id="@+id/all_tab"
 		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content" 
+		    android:layout_height="match_parent" 
 		/>
     </LinearLayout>
 </LinearLayout>
